@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-name=notedrive
+name=noteseries
 echo $name
 
 if [ "$1" = "build" ]; then
