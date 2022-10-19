@@ -48,3 +48,15 @@ def is_prime2(n, trials=10):
             return False
 
     return True  # 通过所有测试，n很大可能为素数
+
+# 生成素数数组
+def prime_generate(max_size=10, max_value=None):
+    result = []
+    max_value = max_value or 100000000000
+    for i in range(2, max_value):  # 生成前100中的素数，从2开始因为2是最小的素数
+        x = is_prime(i)  # i为素数是返回True，则将x加入result数组中;2为测试值
+        if x:
+            result.append(i)
+            if len(result) >= max_size:
+                break
+    return result
