@@ -1,6 +1,6 @@
 [project]
 name = "noteseries"
-version = "0.0.16"
+version = "0.0.17"
 description = "noteseries"
 readme = "README.md"
 requires-python = ">=3.10"
