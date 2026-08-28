@@ -4,7 +4,7 @@ version = "0.0.17"
 description = "funseries"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["notebuild", "sqlalchemy"]
+dependencies = ["funbuild", "sqlalchemy"]
 license = "MIT"
 license-files = ["LICENSE"]
 
