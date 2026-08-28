@@ -1,1 +1,1 @@
-# noteseries
+# funseries

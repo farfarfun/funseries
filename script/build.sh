@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-name=noteseries
+name=funseries
 echo $name
 
 if [ "$1" = "build" ]; then
