@@ -17,6 +17,9 @@ Organization = "https://github.com/farfarfun"
 Repository = "https://github.com/farfarfun/funseries"
 Releases = "https://github.com/farfarfun/funseries/releases"
 
+[dependency-groups]
+dev = ["pytest>=8.0.0"]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
