@@ -1,8 +1,20 @@
-# Changelog
+# 变更日志
 
-## [Unreleased]
+## 0.0.17 - 2026-09-21
 
-### Changed
+### 新增
 
-- **Breaking:** Renamed the import package and PyPI distribution name from `noteseries` to `funseries` to match the repository name. Anyone doing `import noteseries` or `pip install noteseries` must switch to `import funseries` / `pip install funseries`.
-- The old `noteseries` PyPI package will receive one final release that forwards to `funseries` (manual follow-up by the repo owner, not part of this change).
+- 导出 `prime_generate`，并补充素数 API 示例和测试。
+
+### 修复
+
+- 修复 0、1 被误判为素数的问题。
+
+### 变更
+
+- 使用 `src/funseries/` 布局和 `uv.lock` 管理构建依赖。
+- 移除未使用的 SQLAlchemy 运行时依赖。
+
+### 废弃
+
+- 无。
