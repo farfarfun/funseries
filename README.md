@@ -24,7 +24,13 @@ print(prime_generate(max_size=5, max_value=20))
 
 输出：`[2, 3, 5, 7, 11]`。
 
-使用 `uv run pytest` 运行测试。
+使用 `uv run pytest` 运行测试。发布流程直接使用 funbuild，版本号以
+`pyproject.toml` 为唯一来源：
+
+```bash
+uv run funbuild install  # 本地构建与安装校验
+uv run funbuild build    # 完整发布流程
+```
 
 ---
 

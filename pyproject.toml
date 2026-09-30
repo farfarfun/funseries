@@ -18,7 +18,7 @@ Repository = "https://github.com/farfarfun/funseries"
 Releases = "https://github.com/farfarfun/funseries/releases"
 
 [dependency-groups]
-dev = ["pytest>=8.0.0"]
+dev = ["funbuild>=1.6.66", "pytest>=8.0.0"]
 
 [build-system]
 requires = ["hatchling"]

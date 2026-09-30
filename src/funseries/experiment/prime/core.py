@@ -21,7 +21,18 @@ def is_prime(n: int, d: int = 2) -> bool:
 
 
 def is_prime2(n: int, trials: int = 10) -> bool:
-    """使用 Miller-Rabin 概率算法判断整数是否为素数。"""
+    """使用 Miller-Rabin 概率算法判断整数是否为素数。
+
+    Args:
+        n: 待判断的整数，必须至少为 2。
+        trials: 随机底数测试次数，必须为正数。
+
+    Returns:
+        通过全部概率测试时返回 True，确定为合数时返回 False。
+
+    Raises:
+        ValueError: n 小于 2 或 trials 不是正数。
+    """
     if n < 2 or trials < 1:
         raise ValueError("n 必须至少为 2，trials 必须为正数")
     if n in (2, 3):
@@ -42,10 +53,26 @@ def is_prime2(n: int, trials: int = 10) -> bool:
 
 
 def prime_generate(max_size: int = 10, max_value: int | None = None) -> list[int]:
-    """生成不超过上限数量和数值的素数列表。"""
+    """生成不超过数量和数值上限的素数列表。
+
+    Args:
+        max_size: 最多返回的素数数量，不能为负数。
+        max_value: 可选的闭区间数值上限，必须至少为 2。
+
+    Returns:
+        从 2 开始按升序排列的素数列表。
+
+    Raises:
+        ValueError: max_size 为负数或 max_value 小于 2。
+    """
     if max_size < 0:
         raise ValueError("max_size 不能为负数")
     if max_value is not None and max_value < 2:
         raise ValueError("max_value 必须至少为 2")
-    limit = max_value or 100_000_000_000
-    return [n for n in range(2, limit) if is_prime(n)][:max_size]
+    result = []
+    candidate = 2
+    while len(result) < max_size and (max_value is None or candidate <= max_value):
+        if is_prime(candidate):
+            result.append(candidate)
+        candidate += 1
+    return result
