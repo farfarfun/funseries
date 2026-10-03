@@ -1,7 +1,7 @@
 [project]
 name = "funseries"
 version = "0.0.17"
-description = "funseries"
+description = "素数判定、Miller-Rabin 概率检验与素数生成算法实验包"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
