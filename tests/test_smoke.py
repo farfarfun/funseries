@@ -6,6 +6,7 @@ from funseries.experiment.prime import is_prime, is_prime2, prime_generate
 def test_prime_functions():
     assert is_prime(2)
     assert is_prime(97)
+    assert is_prime(10_000_019)
     assert not is_prime(1)
     assert is_prime2(97)
     assert not is_prime2(91)

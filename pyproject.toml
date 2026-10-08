@@ -18,7 +18,7 @@ Repository = "https://github.com/farfarfun/funseries"
 Releases = "https://github.com/farfarfun/funseries/releases"
 
 [dependency-groups]
-dev = ["funbuild>=1.6.66", "pytest>=8.0.0"]
+dev = ["funbuild>=1.6.66", "pytest>=8.0.0", "ruff>=0.11.0"]
 
 [build-system]
 requires = ["hatchling"]
@@ -26,3 +26,6 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/funseries"]
+
+[tool.ruff]
+target-version = "py310"
