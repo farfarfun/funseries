@@ -9,15 +9,17 @@ def is_prime(n: int, d: int = 2) -> bool:
 
     Args:
         n: 待判断的整数。
-        d: 递归试除起点，仅供递归调用使用。
+        d: 试除起点，仅供内部调用使用。
     Returns:
         n 为素数时返回 True。
     """
     if n < 2:
         return False
-    if d > math.isqrt(n):
-        return True
-    return n % d != 0 and is_prime(n, d + 1)
+    while d <= math.isqrt(n):
+        if n % d == 0:
+            return False
+        d += 1
+    return True
 
 
 def is_prime2(n: int, trials: int = 10) -> bool:
